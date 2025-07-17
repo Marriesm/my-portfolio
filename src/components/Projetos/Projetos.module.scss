@@ -27,7 +27,7 @@
     background: #1e1e2f;
     padding: 1rem;
     border-radius: 8px;
-    flex-shrink: 0;
+
   }
 
 }
@@ -47,7 +47,7 @@
 .projetos__li{
      box-shadow: 0 0 6px rgb(103, 108, 135);
      padding: 10px;;
-     width: 300px;
+     max-width: 300px;
      border-radius: 0 0 43px;
     
      button{
