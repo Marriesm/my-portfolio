@@ -1,0 +1,16 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+   background: #090a1a
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* esconde apenas a horizontal */
+}
+
+.Typewriter__wrapper {
+  color: rgb(53, 255, 3);
+  font-size: 1.2rem;
+}

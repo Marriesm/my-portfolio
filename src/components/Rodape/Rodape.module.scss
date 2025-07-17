@@ -1,0 +1,137 @@
+.footer{
+    background-color: rgb(74, 0, 164);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    display: grid;
+    margin-top: 5em;
+    gap: 10px;
+   
+    
+
+    p{
+        margin-right: 18em;
+    }
+}
+
+ .footer__imagem{
+       margin-top: 1em;
+       top: 1em;
+    img{
+        display: flex;
+        margin-right: 19em;
+        background-color: rgb(2, 216, 27);
+        border-radius: 100px;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+    }
+
+    p{
+        margin-left: 2em;
+    }
+        
+    }
+
+.footer__icons{
+    display: flex;
+    margin-right: 19em;
+    gap: 20px;
+}
+@media (max-width: 1024px) {
+   .footer{
+     display: grid;
+     justify-content: center;
+    }
+
+    .footer__imagem{
+        display: grid;
+        margin-right: 11em;
+    }
+    .footer__icons{
+        margin-right: 30em;
+    }
+    .footer__desc{
+        position: relative;
+        right: 6em;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer__imagem{
+        display: grid;
+        margin-right: 19em;
+    }
+    .footer__icons{ 
+        margin-right: 39em;
+    }
+    .footer__desc{
+        position: relative;
+        right: 9em;
+    }
+}
+
+
+  @media (max-width: 590px) {
+    .footer__imagem{
+        position: relative;
+        right: 3em;
+        
+    }
+     .footer__icons{ 
+         position: relative;
+         right: 3em;
+    }
+    .footer__desc{
+        position: relative;
+        right: 13em;
+    }
+  }
+
+    @media (max-width: 490px) {
+    .footer__imagem{
+        position: relative;
+        right: 5em;
+        
+    }
+     .footer__icons{ 
+         position: relative;
+         right: 5em;
+    }
+    .footer__desc{
+        position: relative;
+        right: 16em;
+    }
+  }
+
+        @media (max-width: 435px) {
+        .footer__imagem{
+        right: 7em;   
+        }
+        .footer__icons{ 
+         position: relative;
+         right: 7em;
+    }
+        .footer__desc{
+            position: relative;
+        font-size: 10px;
+        right: 33em;
+        
+      }
+    }
+
+         @media (max-width: 375px) {
+        .footer__imagem{
+        right: 8em;   
+        }
+        .footer__icons{ 
+         position: relative;
+         right: 8em;
+    }
+        .footer__desc{
+            position: relative;
+        font-size: 10px;
+        right: 34em;
+        
+      }
+    }

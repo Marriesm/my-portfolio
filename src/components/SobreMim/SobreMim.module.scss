@@ -1,0 +1,198 @@
+.sobre{
+  display: grid;
+  background: transparent;
+  justify-items: center;
+  justify-content: center;
+  margin-right: 17em;
+  
+  h2{
+    color: rgb(147, 246, 0);
+    margin-left: 17em;
+  }
+ 
+}
+
+
+.sobre__imagem{
+  background: linear-gradient(90deg, #1e05db, #40c208);
+  border-radius: 95px 95px 0 0;
+  
+  
+  
+}
+
+.sobre__me{
+  height: 520px;
+  position: relative;
+  top: 6px;
+}
+
+strong{
+  color: #04ff00;
+}
+.sobre__cards{
+  display: flex;
+  gap: 20px;
+  
+}
+.sobre__text{
+  display: flex;
+  gap: 20px;
+  
+}
+
+.sobre__card{
+  height: 140px;
+   justify-items: center;
+   border-radius: 15px;
+    background: linear-gradient(100deg, #b700ff, #000966);
+    color:#ffffff;
+   padding: 1em;
+   width: 150px;
+  
+  h3{
+    font-size: 20px;
+    color: rgb(147, 246, 0);
+  }
+.sobre__icons{
+  color: rgb(147, 246, 0);
+}
+   p{
+    font-size: 10px;
+   }
+}
+
+.sobre__descricao{
+  width: 550px;
+}
+
+@media (max-width: 1024px) {
+  .sobre{
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    
+  }
+  .sobre__h2{
+    position: relative;
+    right: 14em;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+  .sobre_cards{
+     display: grid;
+     grid-template-columns: 1fr;
+     flex-direction: column;
+  }
+
+  .sobre__text{
+    display: grid;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .sobre__h2{
+      position: relative;
+      right:15em;
+    }
+    .sobre__text{
+      display: grid;
+      max-width: 250px;
+    } 
+  .sobre__imagem{
+    width: 580px;
+  }
+}
+
+@media (max-width: 650px) {
+    .sobre__text{
+      position: relative;
+      right: 2em;
+    }
+    
+}
+
+   @media (max-width: 590px) {
+    .sobre__h2{
+      position: relative;
+      right:18em;
+    }
+    .sobre__imagem{
+      position: relative;
+      right: 2em;
+      max-width: 380px;
+       img{
+        position: relative;
+        right: 1em;
+        width: 350px;
+        height: 300px;
+       }
+    }
+      .sobre__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        width: 300px;
+      }
+      .cards__texts{
+        position: relative;
+        right:2em;
+      }
+     .sobre__card{
+      width: 150px;
+     }
+
+     .sobre__descricao{
+      max-width: 350px;
+     }
+   }
+
+   @media (max-width: 490px) {
+    .cards__texts{
+      right: 5em;
+    }
+    .sobre__imagem{
+      right:5em;
+    }
+    .sobre__h2{
+      right: 19em;
+    }
+          }
+
+    @media (max-width: 435px) {
+        .sobre__imagem{
+          position: relative;
+          right: 6em;
+          width:300px;
+        }
+        .cards__texts{
+          right:6em;
+        }
+        .sobre__h2{
+        position: relative;
+        right: 20em;
+      }
+        .sobre__card{
+          max-width: 110px;
+
+        }
+        .sobre__descricao{
+          max-width: 290px;
+        }
+    }
+
+     @media (max-width: 395px) {
+        .sobre__imagem{
+        right:7.5em;
+      }
+      .cards__texts{
+       right:8em;
+      }
+      .sobre__h2{
+        position: relative;
+        right: 21em;
+      }
+    }

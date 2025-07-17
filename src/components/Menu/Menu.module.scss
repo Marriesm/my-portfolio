@@ -1,0 +1,121 @@
+.header{
+ position: fixed;
+ display: flex;
+ align-items: center;
+ 
+ justify-content: center;
+ justify-items: center;
+ gap: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #0a0a23; 
+  padding: 1rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo{
+   img{
+      display: flex;
+      width: 70px;
+      border-radius: 10px;
+      margin-top: 6px;
+      position: relative;
+      right: 7em;
+    
+   }
+}
+
+
+.links{
+   color: aliceblue;
+    display: flex;
+    gap: 35px;
+    cursor: pointer;
+
+}
+
+.link {
+  position: relative;
+  border: none;
+  display: inline-block;
+  font-weight: bold;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #00ff2a;
+  cursor: pointer;
+  padding: 4px 0;
+  outline: none; // remove a borda padrão de foco (opcional)
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #8000ff;
+    transition: width 0.6s ease-in-out;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: #cc00ff;
+    border: none;
+    outline: none; 
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:focus-visible::after {
+    width: 100%;
+    border: none;
+  }
+}
+   
+
+
+@media (max-width: 1020px) {
+  .links{
+    display: none
+  }
+  .logo{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 29em;
+  }
+}
+
+@media (max-width: 800px) {
+  
+  .logo{
+    
+    position: relative;
+    left: 5em;
+  }
+}
+
+@media (max-width: 600px) {
+  
+  .logo{
+    
+    position: relative;
+    left: 9em;
+  }
+}
+
+@media (max-width: 450px) {
+  
+  .logo{
+    
+    position: relative;
+    left: 12em;
+  }
+}
+
+
+
+
+

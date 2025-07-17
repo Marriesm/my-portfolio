@@ -1,0 +1,147 @@
+
+
+.projetos{
+   
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.projetos__scroll {
+    margin-right: 15em;
+ width: 1220px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .projetos__li {
+    height:400px;
+    align-items: center;
+    width: 300px;
+    background: #1e1e2f;
+    padding: 1rem;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+}
+
+
+.projetos__titulo{
+    display: flex;
+    margin-right: 12em;
+    justify-items: center;
+    justify-content: center;
+    color: #04ff00;
+}
+.projeto__h4{
+    color: #04ff00;
+}
+
+.projetos__li{
+     box-shadow: 0 0 6px rgb(103, 108, 135);
+     padding: 10px;;
+     width: 300px;
+     border-radius: 0 0 43px;
+    
+     button{
+        padding: 12px;
+        width: 180px;
+        background: linear-gradient(100deg, #b700ff, #000966);
+     }
+    a{
+        color: white;
+    }
+     img{
+        width: 300px;
+     }
+}
+
+@media (max-width: 1024px) {
+   
+.projetos__scroll{
+    display: grid;
+    width:500px;
+    margin-right: 35em;
+    grid-template-columns: 2fr 2fr;
+}
+.projetos__titulo{
+    margin-right: 24em;
+}
+}
+
+@media (max-width: 900px) {
+    .projetos__lista{
+        position: relative;
+         right: 20em;
+    }
+    .projetos__titulo{
+        position: relative;
+        
+    }
+}
+@media (max-width: 780px) {
+    .projetos__lista{
+      position: relative;
+      margin-right: 9em;
+    }
+    
+}
+@media (max-width: 692px) {
+    .projetos__scroll{
+        grid-template-columns: 1fr ;
+        
+    }
+    
+}
+   @media (max-width: 590px) {
+      .projetos__scroll{
+        position: relative;
+        right:3em
+      }
+      .projetos__titulo{
+        margin-right: 28em;
+      }
+   }
+
+ @media (max-width: 545px) {
+     .projetos__scroll{
+        right:5em;
+     }
+     .projetos__titulo{
+        margin-right: 30em;
+     }
+  }
+   @media (max-width: 490px) {
+     .projetos__scroll{
+        right:7em;
+     }
+     .projetos__titulo{
+        margin-right: 32em;
+     }
+  }
+    @media (max-width: 435px) {
+     .projetos__scroll{
+        right:9em;
+     }
+     .projetos__titulo{
+        margin-right: 35em;
+     }
+  }
+
+
+
+   @media (max-width: 395px) {
+    .projetos__titulo{       
+        margin-right: 37em;
+    }
+    .projetos__scroll{
+        right:10em;
+    }
+ }

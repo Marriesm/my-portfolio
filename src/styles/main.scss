@@ -1,0 +1,8 @@
+@import './variaveis.module.scss';
+@import './animations.scss';
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: $bg-dark;
+  color: #210F37;
+}

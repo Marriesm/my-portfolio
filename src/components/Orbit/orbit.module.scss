@@ -1,0 +1,455 @@
+.orbit{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  position: relative;
+  justify-content: center;
+  
+   
+}
+.button__curriculo{
+  background: linear-gradient(100deg, #b700ff, #000966);
+  
+}
+.iconbutton{
+  padding-left: 1em;
+  top: 20%;
+}
+h1{
+  letter-spacing: 1px;
+  color: white;
+}
+h1 strong{
+    background: linear-gradient(90deg,#b700ff, #000966) ; // seu degradê
+background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+   border-radius: 4px;
+   margin-top: 1em;
+   
+}
+h1:hover{
+  color:#1ee000e7;
+   
+}
+
+.orbitBackground {
+  justify-content: center;
+  width: 100vw;
+  height: 700px;
+  right:5em;
+  justify-items: center;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.orbitContainer {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  max-width: 550px;
+  max-height: 530px;
+  overflow: hidden;
+  
+
+}
+.orbitRing {
+  position: absolute;
+  width: 160px; // ajuste conformda imagem
+  height: 160px;
+  border: 1px dashed #b700ff; // linha discretdius: 50%;
+  z-index: 1;
+}
+
+.orbitCircle {
+  animation: rotate 10s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 75%;
+  transform: rotate(-10deg);
+  border-radius: 50%;
+ 
+   transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.icon.ts {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon.react {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.orbitCircle :global(svg) {
+  position: absolute;
+  font-size: 3.5rem;
+  
+  transition: transform 0.3s ease;
+}
+
+.orbitCircle :global(svg):hover {
+  transform: scale(1.1);
+  color: #B6F500;
+}
+
+
+.react {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  animation: stayUpright 20s linear infinite;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #61dafb;
+}
+
+.react   { top: 0%;    left: 50%; transform: translate(-50%, 0) rotate(-0deg);     color: #00ffdd; }
+.sass    { top: 25%;   left: 85%; transform: translate(-50%, -50%) rotate(-105deg); color: #ff0080; }
+.ts      { top: 60%;   left: 93%; transform: translate(-50%, -50%) rotate(-90deg); color: #00a2ff; }
+.node    { bottom: 10%; right: 25%; transform: translate(50%, 50%) rotate(-135deg); color: #1bff13; }
+.python  { bottom: -5%; left: 45%; transform: translate(-50%, 0) rotate(-180deg);   color: #0bff95; }
+.js      { bottom: 20%; left: 15%; transform: translate(-50%, 50%) rotate(-225deg); color: #eeff00; }
+.sql     { top: 45%;   left: 8%; transform: translate(-50%, -50%) rotate(-270deg); color: #ffffff; }
+.html1   { top: 15%;   left: 25%; transform: translate(-50%, -50%) rotate(-315deg); color: #ff7b00; }
+
+.react, .sass, .ts, .node, .python,
+.js, .sql, .html1{
+  padding:0.1em;
+  background: linear-gradient(100deg, #b700ff, #000966);
+  border-radius: 100px;
+}
+
+
+.profileImageContainer {
+  margin-top: 9em;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  margin-top: 3em;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.orbitRing {
+  
+  position: absolute;
+  width: 360px; 
+  height: 360px;
+  border: 1px solid rgba(30, 224, 0, 0.907); 
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.profileImage {
+  width: 250px; 
+  height: 250px;
+  border: 4px solid #00ff00;
+  box-shadow: 0 0 15px #00ff00; 
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2;
+  
+}
+
+ .Typewriter__wrapper {
+    color: rgb(43, 255, 0);
+ }
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes stayUpright {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@media (min-width: 1904px) {
+  
+   .text{
+    position: relative;
+    left: 6em;
+   }
+}
+
+@media (min-width: 2104px) {
+  
+   .text{
+    position: relative;
+    left: 13em;
+   }
+}
+
+@media (min-width: 2304px) {
+  
+   .text{
+    position: relative;
+    left: 29em;
+   }
+}
+@media (max-width: 1024px) {
+
+  .orbit{
+    align-items: center;
+    margin-right: 33em;
+    display: grid;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+  }
+  .orbitBackground {
+    justify-content: center;
+    margin: 0;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
+    position: relative;
+    left: -1em;
+  }
+
+  .orbitContainer {
+    width: 70vmin;
+    height: 70vmin;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .orbitRing {
+    width: 280px;
+    height: 280px;
+  }
+
+  .profileImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profileImageContainer {
+    margin-top: 6em;
+  }
+
+  .text {
+     max-width: 600px;
+    max-height: 600px;
+    padding-top: 5em;
+    position: relative;
+    left:-1em;
+  }
+
+  .button {
+    margin-top: 2em;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .orbitBackground {
+    
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    right: 1em;
+    
+  }
+
+
+
+  .orbitContainer {
+    width: 90vmin;
+    height: 90vmin;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .profileImageContainer{
+    position: relative;
+    bottom: 1em;
+  }
+
+  .orbitRing {
+    width: 240px;
+    height: 240px;
+  }
+
+  .orbitCircle {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profileImage {
+    width: 160px;
+    height: 160px;
+    border-width: 2px;
+  }
+
+  .text {
+    
+    position: relative;
+    
+    top: 3em;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    margin-top: 2em;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icon.react,
+  .icon.sass,
+  .icon.ts,
+  .icon.node,
+  .icon.python,
+  .icon.js,
+  .icon.sql,
+  .icon.html1 {
+    font-size: 1.8rem;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+    .orbitBackground{
+      position: relative;
+      margin-right: 3em;
+    }
+    .text {
+      width:350px;
+     margin-right: 3em;
+    position: relative;
+    
+  }
+    
+}
+
+@media (max-width: 590px) {
+  .text{
+    margin-right: 6em;
+    
+}
+.orbitBackground{
+      position: relative;
+    margin-right: 7em;
+    }
+}
+
+  @media (max-width: 545px) {
+   .text{
+     margin-right: 8em;
+   }
+   .orbitBackground{
+    right:6em;
+   }
+  }
+
+
+   @media (max-width: 490px) {
+      .orbitBackground{
+        
+        margin-right: 13em;
+      }
+      .text{
+         position: relative;
+         width:300px;
+         margin-right: 13em;
+      }
+       .Typewriter__wrapper {
+        font-size: 15px;
+       }
+       .icon.react,
+  .icon.sass,
+  .icon.ts,
+  .icon.node,
+  .icon.python,
+  .icon.js,
+  .icon.sql,
+  .icon.html1 {
+    font-size: 1rem;
+    width: 10px;
+    height: 10px;
+  }
+
+  .orbitCircle{
+    width: 260px;
+    height: 260px;
+  }
+  .profileImageContainer{
+     height: 100px;
+     position: relative;
+     top: 0.5em;
+  }
+     
+
+   }
+
+
+@media (max-width: 700px) {
+  .carrossel__scroll{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    right: 9em;
+     width:550px;
+    
+  }
+  .cartao__certificado{
+    width:550px;
+  }
+}
+
+@media (max-width: 435px) {
+  .orbitBackground{
+    margin-right: 15.5em;
+  }
+  .text{
+       margin-right: 15.5em;
+}
+}
+ 
+@media (max-width: 395px) {
+  .orbitBackground{
+   margin-right: 18em;
+  }
+  .text{
+        margin-right: 18em;
+      }
+}

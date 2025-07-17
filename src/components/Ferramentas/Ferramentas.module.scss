@@ -1,0 +1,157 @@
+
+.ferramentas {
+  padding: 2rem;
+  background: transparent;
+  text-align: center;
+  display: grid;
+}
+.ferramentas__titulo{
+    margin-right: 15em;
+    color:  #04ff00;
+}
+.ferramentas__card {
+  display: flex;
+  justify-content: center;
+  margin-right: 14em ;
+}
+
+.ferramentas__ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+
+}
+
+.ferramentas__li {
+  background-color: #1a1a2e;
+ 
+   box-shadow: 0 0 6px rgb(103, 108, 135);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  p {
+    margin-top: 0.5rem;
+    color: white;
+    font-size: 14px;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 12px #6c63ff88;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ferramentas__card{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+  }
+  .ferramentas__titulo{
+    position: relative;
+    margin-right: 29em;
+  }
+  .ferramentas__ul {
+    max-width: 650px;
+    margin-right: 19em;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+}
+
+@media (max-width: 800px) {
+  .ferramentas__card{
+    position: relative;
+    right: 1em;
+  }
+  .ferramentas__titulo{
+    position: relative;
+    margin-right: 30em;
+  }
+}
+
+@media (max-width: 650px) {
+    .ferramentas__card{
+      position: relative;
+      right: 3em;
+    }
+     .ferramentas__titulo{
+    position: relative;
+    margin-right: 31em;
+  }
+    
+}
+
+
+   @media (max-width: 590px) {
+      .ferramentas{
+        display: grid;
+      }
+
+      .ferramentas__card{
+        position: relative;
+        right: 4em;
+      }
+      .ferramentas__titulo{
+        position: relative;
+        right: 2em;
+      }
+      .ferramentas__ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+   }
+
+    @media (max-width: 545px) {
+    .ferramentas__titulo{
+      right:4em;
+    }
+    .ferramentas__card{
+      right:6em;
+    }
+  }
+
+   @media (max-width: 490px) {
+    .ferramentas__card{
+      right:8em;
+    }
+    .ferramentas__titulo{
+      right:6em;
+    }
+  }
+
+      @media (max-width: 435px) {
+        .ferramentas__card{
+        position: relative;
+        right: 10em;
+      }
+      .ferramentas__titulo{
+        position: relative;
+        right: 8em;
+      }
+      }
+
+       @media (max-width: 395px) {
+        .ferramentas__card{
+         right: 11em;
+      }
+      .ferramentas__titulo{
+        right: 8em;
+      }
+     
+    }
+
+      
+     
