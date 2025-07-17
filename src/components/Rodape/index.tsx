@@ -11,10 +11,10 @@ const Rodape = () => {
             </div>
             
             <div className={styles.footer__icons}>
-                <FaGithub size={25}/> 
-                <FaLinkedin size={25}/>
-                <FaDiscord size={25}/>
-                <FaInstagram size={25}/>
+                <FaGithub size={25} color="#fffff"/> 
+                <FaLinkedin size={25} color="#fffff"/>
+                <FaDiscord size={25} color="#fffff"/>
+                <FaInstagram size={25} color="#fffff"/>
                 
             </div>
             <p className={styles.footer__desc}>2025 © Maria Eduarda Soares. All rights reserved</p>
