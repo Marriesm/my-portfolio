@@ -43,8 +43,12 @@
       text-align: center;
      
       p{
+        color: white;
         font-size: 15px;
         
+      }
+      h4{
+        color: white
       }
 
       a{
@@ -138,6 +142,8 @@
     border: 1px solid greenyellow;
     border-radius: 0 100px 180px 0;
     height: 644px;
+
+   
    }
 
    @media (max-width: 1024px) {
