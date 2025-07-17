@@ -170,7 +170,7 @@
   .carrossel__scroll{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    width: 400px;
+    max-width: 400px;
     justify-content: center;
     margin-left: 4em;
     

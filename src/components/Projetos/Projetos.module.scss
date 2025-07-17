@@ -67,7 +67,7 @@
    
 .projetos__scroll{
     display: grid;
-    width:500px;
+    max-width:500px;
     margin-right: 35em;
     grid-template-columns: 2fr 2fr;
 }
