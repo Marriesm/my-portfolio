@@ -7,12 +7,23 @@ import jogo from '../../../public/assets/amigosecreto.png';
 import organo from '../../../public/assets/organo.png';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const Projetos = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const projetos = [
     {
@@ -53,27 +64,37 @@ const Projetos = () => {
     },
   ];
 
+  const ConteudoProjetos = (
+    <>
+      <h2 className={styles.projetos__titulo}>PROJETOS</h2>
+
+      <div className={styles.projetos__scroll}>
+        {projetos.map((proj, index) => (
+          <div key={index} className={styles.projetos__li}>
+            <img src={proj.img} alt={proj.alt} />
+            <h4 className={styles.projeto__h4}>{proj.titulo}</h4>
+            <p>{proj.descricao}</p>
+            <button><a href="#">Ver mais</a></button>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+
   return (
     <section className={styles.projetos} id="projetos" style={{ scrollMarginTop: '100px' }}>
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 50 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 1.9 }}
-      >
-        <h2 className={styles.projetos__titulo}>PROJETOS</h2>
-
-        <div className={styles.projetos__scroll}>
-          {projetos.map((proj, index) => (
-            <div key={index} className={styles.projetos__li}>
-              <img src={proj.img} alt={proj.alt} />
-              <h4 className={styles.projeto__h4}>{proj.titulo}</h4>
-              <p>{proj.descricao}</p>
-              <button><a href="#">Ver mais</a></button>
-            </div>
-          ))}
-        </div>
-      </motion.div>
+      {isMobile ? (
+        <div ref={ref}>{ConteudoProjetos}</div>
+      ) : (
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.9 }}
+        >
+          {ConteudoProjetos}
+        </motion.div>
+      )}
     </section>
   );
 };
