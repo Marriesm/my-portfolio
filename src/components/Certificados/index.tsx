@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import styles from './Certificados.module.scss';
 import formacaopython from '../../../public/assets/formacaopython.png';
 import reactetype from '../../../public/assets/FormaçãoReactTypescript.png';
@@ -64,60 +64,90 @@ const Certificado: React.FC = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const [selecionado, setSelecionado] = useState<CertificadoData | null>(null);
 
-  return (
-    <section className={styles.certificado__section} id="certificados" style={{ scrollMarginTop: '90px' }}>
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 50 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 1.9 }}
-      >
-        <h2 className={styles.certificado__titulo}>🎓 Certificados</h2>
-        <p className={styles.certificado__p}><strong>*</strong> Clique no card para saber mais!</p>
+  // Estado para detectar se é mobile (768px ou menos)
+  const [isMobile, setIsMobile] = React.useState(false);
 
-        <div className={styles.carrossel__scroll}>
-          {certificados.map((cert) => (
-            <div
-              key={cert.id}
-              className={styles.cartao__certificado}
-              onClick={() => setSelecionado(cert)}
-            >
-              <img src={cert.imagem} alt={cert.titulo} />
-              <div className={styles.info__certificado}>
-                <h3>{cert.titulo}</h3>
-                <p className={styles.info__p}>{cert.instituicao}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
 
-        {selecionado && (
-          <div className={styles.modal} onClick={() => setSelecionado(null)}>
-            <div className={styles.conteudo__modal} onClick={(e) => e.stopPropagation()}>
-              <div className={styles.modal__button}>
-                <button onClick={() => setSelecionado(null)}>Fechar ✖</button>
-              </div>
-              <div className={styles.modal__imagem}>
-                <img src={selecionado.imagem} alt={selecionado.titulo} />
-              </div>
-              <div className={styles.modal__text}>
-                <h3>{selecionado.titulo}</h3>
-                <p className={styles.modal__descricao}>{selecionado.descricao}</p>
-              </div>
-              {selecionado.link && (
-                <a
-                  href={selecionado.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.botao__certificado}
-                >
-                  VER CERTIFICADO 📄
-                </a>
-              )}
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const conteudo = (
+    <>
+      <h2 className={styles.certificado__titulo}>🎓 Certificados</h2>
+      <p className={styles.certificado__p}>
+        <strong>*</strong> Clique no card para saber mais!
+      </p>
+
+      <div className={styles.carrossel__scroll}>
+        {certificados.map((cert) => (
+          <div
+            key={cert.id}
+            className={styles.cartao__certificado}
+            onClick={() => setSelecionado(cert)}
+          >
+            <img src={cert.imagem} alt={cert.titulo} />
+            <div className={styles.info__certificado}>
+              <h3>{cert.titulo}</h3>
+              <p className={styles.info__p}>{cert.instituicao}</p>
             </div>
           </div>
-        )}
-      </motion.div>
+        ))}
+      </div>
+
+      {selecionado && (
+        <div className={styles.modal} onClick={() => setSelecionado(null)}>
+          <div
+            className={styles.conteudo__modal}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className={styles.modal__button}>
+              <button onClick={() => setSelecionado(null)}>Fechar ✖</button>
+            </div>
+            <div className={styles.modal__imagem}>
+              <img src={selecionado.imagem} alt={selecionado.titulo} />
+            </div>
+            <div className={styles.modal__text}>
+              <h3>{selecionado.titulo}</h3>
+              <p className={styles.modal__descricao}>{selecionado.descricao}</p>
+            </div>
+            {selecionado.link && (
+              <a
+                href={selecionado.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.botao__certificado}
+              >
+                VER CERTIFICADO 📄
+              </a>
+            )}
+          </div>
+        </div>
+      )}
+    </>
+  );
+
+  return (
+    <section
+      className={styles.certificado__section}
+      id="certificados"
+      style={{ scrollMarginTop: '90px' }}
+    >
+      {isMobile ? (
+        <div ref={ref}>{conteudo}</div>
+      ) : (
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.9 }}
+        >
+          {conteudo}
+        </motion.div>
+      )}
     </section>
   );
 };
