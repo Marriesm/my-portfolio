@@ -1,6 +1,6 @@
 import styles from './Rodape.module.scss';
 import { FaInstagram, FaLinkedin, FaGithub, FaDiscord } from 'react-icons/fa';
-import chibi from '../../assets/chibi.png'
+import chibi from '../../../public/assets/chibi.png'
 
 const Rodape = () => {
     return(

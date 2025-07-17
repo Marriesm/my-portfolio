@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from './Certificados.module.scss';
-import formacaopython from '../../assets/formacaopython.png';
-import reactetype from '../../assets/FormaçãoReactTypescript.png';
-import sql from '../../assets/Formacaosql.png';
-import fromacaojavascript from '../../assets/FormacaoJavascript.png';
-import gitcurso from '../../assets/gitcurso.png';
+import formacaopython from '../../../public/assets/formacaopython.png';
+import reactetype from '../../../public/assets/FormaçãoReactTypescript.png';
+import sql from '../../../public/assets/Formacaosql.png';
+import fromacaojavascript from '../../../public/assets/FormacaoJavascript.png';
+import gitcurso from '../../../public/assets/gitcurso.png';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 

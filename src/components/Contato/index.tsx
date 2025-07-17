@@ -1,7 +1,7 @@
 import styles from './Contato.module.scss';
 import { FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
-import jaquetaroxa from '../../assets/jaquetaroxa.png';
+import jaquetaroxa from '../../../public/assets/jaquetaroxa.png';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 

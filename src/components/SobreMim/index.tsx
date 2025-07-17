@@ -1,5 +1,5 @@
 import styles from './SobreMim.module.scss';
-import camisaroxa from '../../assets/camisaroxa.png';
+import camisaroxa from '../../../public/assets/camisaroxa.png';
 import { BadgeCheck, Briefcase, Headphones } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';

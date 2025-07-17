@@ -3,7 +3,7 @@ import { FaSass, FaJs, FaHtml5, FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 import { DiPython } from 'react-icons/di';
 import { FiDownload } from "react-icons/fi";
-import metwo from '../../assets/metwo.jpg'
+import metwo from '../../../public/assets/metwo.jpg'
 import { SiMysql } from 'react-icons/si';
 import Typewriter from 'typewriter-effect';
 

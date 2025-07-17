@@ -1,5 +1,5 @@
 import styles from './Menu.module.scss';
-import chibimenu from '../../assets/chibimenu.png';
+import chibimenu from '../../../public/assets/chibimenu.png';
 
 
 const scrollToSection = (id: string) => {
