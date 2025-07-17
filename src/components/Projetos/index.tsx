@@ -1,10 +1,10 @@
 import styles from './Projetos.module.scss';
-import git from '../../assets/github.png';
-import avanti from '../../assets/avanti.png';
-import aluroni from '../../assets/aluroni.png';
-import tarefas from '../../assets/tarefas.png';
-import jogo from '../../assets/amigosecreto.png';
-import organo from '../../assets/organo.png';
+import git from '../../../public/assets/github.png';
+import avanti from '../../../public/assets/avanti.png';
+import aluroni from '../../../public/assets/aluroni.png';
+import tarefas from '../../../public/assets/tarefas.png';
+import jogo from '../../../public/assets/amigosecreto.png';
+import organo from '../../../public/assets/organo.png';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
