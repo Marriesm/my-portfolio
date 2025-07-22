@@ -56,7 +56,7 @@ const { ref, inView } = useInView({
           <p className={styles.sobre__descricao}>
             <strong>Desenvolvedora full stack</strong> com foco em criar
             soluções digitais modernas, funcionais e responsivas. Tenho
-            experiência com React, TypeScript, Node.js, além de conhecimento em
+            experiência com React, TypeScript, Node.js, Java, além de conhecimento em
             Python, SQL, análise de dados e bibliotecas como Pandas e NumPy.
             <br />
             <br />

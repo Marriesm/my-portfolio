@@ -4,9 +4,9 @@ import formacaopython from '../../../public/assets/formacaopython.png';
 import reactetype from '../../../public/assets/FormaçãoReactTypescript.png';
 import sql from '../../../public/assets/Formacaosql.png';
 import fromacaojavascript from '../../../public/assets/FormacaoJavascript.png';
-import gitcurso from '../../../public/assets/gitcurso.png';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import java from '../../../public/assets/java.png'
 
 interface CertificadoData {
   id: number;
@@ -52,10 +52,10 @@ const certificados: CertificadoData[] = [
   },
   {
     id: 5,
-    titulo: 'Formação Git e Github',
+    titulo: 'Curso Java',
     instituicao: 'Alura',
-    imagem: gitcurso,
-    descricao: 'Controle de versão com Git e colaboração com GitHub.',
+    imagem: java,
+    descricao: 'Conceitos Java e instalação de ambiente.',
     link: 'https://cursos.alura.com.br/degree/certificate/8bcc519a-a781-47df-9ac3-d63f0513f61d?lang=pt_BR',
   },
 ];

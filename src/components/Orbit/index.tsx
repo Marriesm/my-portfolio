@@ -6,6 +6,9 @@ import { FiDownload } from "react-icons/fi";
 import metwo from '../../../public/assets/metwo.jpg'
 import { SiMysql } from 'react-icons/si';
 import Typewriter from 'typewriter-effect';
+import '../../App.css';
+
+
 
 const Orbit = () => {
 
@@ -34,9 +37,10 @@ const Orbit = () => {
         options={{
           autoStart: true,
           loop: false,
-          delay: 50,
+          delay: 80,
           cursor: '|',
         }}
+        
       />
       <div/>
          <div className={styles.button}>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {
-  FaHtml5, FaCss3Alt, FaReact, FaJs, FaBootstrap, FaPython,
+  FaHtml5, FaCss3Alt, FaReact, FaJs, FaPython,
   FaSass, FaNodeJs
 } from "react-icons/fa";
 import {
@@ -13,6 +13,8 @@ import {
 import styles from "./SkillBar.module.scss";
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { FaCoffee } from 'react-icons/fa';
+
 
 const SkillBar = () => {
   const { ref, inView } = useInView({
@@ -28,7 +30,7 @@ const SkillBar = () => {
     { name: "React", icon: <FaReact />, percentage: 90, category: "Front-end" },
     { name: "JavaScript", icon: <FaJs />, percentage: 85, category: "Front-end" },
     { name: "Tailwind CSS", icon: <SiTailwindcss />, percentage: 80, category: "Front-end" },
-    { name: "Bootstrap5", icon: <FaBootstrap />, percentage: 80, category: "Front-end" },
+    { name: "Java", icon: <FaCoffee/>, percentage: 80, category: "Back-end" },
     { name: "TypeScript", icon: <SiTypescript />, percentage: 90, category: "Front-end" },
     { name: "Next.js", icon: <SiNextdotjs />, percentage: 75, category: "Front-end" },
     { name: "Vite", icon: <SiVite />, percentage: 80, category: "Front-end" },

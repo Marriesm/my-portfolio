@@ -11,6 +11,9 @@ html, body {
 }
 
 .Typewriter__wrapper {
-  color: rgb(53, 255, 3);
-  font-size: 1.2rem;
+  
+  font-family: 'Bitcount Prop Double', sans serif;
+  color: rgb(51, 255, 0);
+  font-size: 1.3rem;
+ 
 }
